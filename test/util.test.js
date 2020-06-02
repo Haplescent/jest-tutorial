@@ -1,4 +1,4 @@
-const { add } = require("../util/util");
+const { add, minus } = require("../util/util");
 describe("Add", () => {
   describe("Success", () => {
     it("Should return the sum of the 2 passed arguments", () => {
@@ -9,5 +9,12 @@ describe("Add", () => {
 describe("Failure", () => {
   it("Should throw an error if 1st argument isn't a string", () => {
     expect(() => add("2", 2).toThrowError());
+  });
+});
+describe("Minus", () => {
+  describe("Success", () => {
+    it("Should return the sum of the 2 passed arguments", () => {
+      expect(minus(6, 3)).toBe(3);
+    });
   });
 });
