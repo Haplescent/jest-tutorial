@@ -6,3 +6,8 @@ describe("Add", () => {
     });
   });
 });
+describe("Failure", () => {
+  it("Should throw an error if 1st argument isn't a string", () => {
+    expect(() => add("2", 2).toThrowError());
+  });
+});
