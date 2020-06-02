@@ -1,4 +1,5 @@
-const { add, minus } = require("../util/util");
+const { add, minus, multiple, divide, power } = require("../util/util");
+
 describe("Add", () => {
   describe("Success", () => {
     it("Should return the sum of the 2 passed arguments", () => {
@@ -11,6 +12,7 @@ describe("Add", () => {
     });
   });
 });
+
 describe("Minus", () => {
   describe("Success", () => {
     it("Should return the sum of the 2 passed arguments", () => {
@@ -20,6 +22,45 @@ describe("Minus", () => {
   describe("Failure", () => {
     it("Should throw an error if either argument isn't a string", () => {
       expect(() => minus("6", 3).toThrowError());
+    });
+  });
+});
+
+describe("Multiple", () => {
+  describe("Success", () => {
+    it("Should return the sum of the 2 passed arguments", () => {
+      expect(multiple(2, 3)).toBe(6);
+    });
+  });
+  describe("Failure", () => {
+    it("Should throw an error if either argument isn't a string", () => {
+      expect(() => multiple("2", 2).toThrowError());
+    });
+  });
+});
+
+describe("Divide", () => {
+  describe("Success", () => {
+    it("Should return the sum of the 2 passed arguments", () => {
+      expect(divide(10, 5)).toBe(2);
+    });
+  });
+  describe("Failure", () => {
+    it("Should throw an error if either argument isn't a string", () => {
+      expect(() => divide("2", 2).toThrowError());
+    });
+  });
+});
+
+describe("Power", () => {
+  describe("Success", () => {
+    it("Should return the sum of the 2 passed arguments", () => {
+      expect(power(2, 3)).toBe(8);
+    });
+  });
+  describe("Failure", () => {
+    it("Should throw an error if either argument isn't a string", () => {
+      expect(() => power("2", 2).toThrowError());
     });
   });
 });
